@@ -6,7 +6,7 @@ package com.ahmedadeltito.photoeditorsdk;
 
 public interface OnPhotoEditorSDKListener {
 
-    void onEditTextChangeListener(String text, int colorCode);
+    void onEditTextChangeListener(String text, int colorCode, Typeface fontCode);
 
     void onAddViewListener(ViewType viewType, int numberOfAddedViews);
 

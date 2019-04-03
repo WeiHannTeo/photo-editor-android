@@ -7,6 +7,7 @@ import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.graphics.Typeface;
 
 class MultiTouchListener implements OnTouchListener {
 

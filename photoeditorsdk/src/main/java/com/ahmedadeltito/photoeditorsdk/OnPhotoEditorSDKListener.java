@@ -1,5 +1,7 @@
 package com.ahmedadeltito.photoeditorsdk;
 
+
+import android.graphics.Typeface;
 /**
  * Created by Ahmed Adel on 02/06/2017.
  */

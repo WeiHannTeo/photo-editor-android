@@ -145,11 +145,11 @@ class MultiTouchListener implements OnTouchListener {
                     if (view instanceof TextView) {
                         if (onMultiTouchListener != null) {
                             onMultiTouchListener.onEditTextClickListener(
-                                    ((TextView) view).getText().toString(), ((TextView) view).getCurrentTextColor(), ((TextView) view).getTypeface());
+                                    ((TextView) view).getText().toString(), ((TextView) view).getCurrentTextColor(), ((TextView) view).getTypeface(), ((TextView) view).getLineHeight());
                         }
                         if (onPhotoEditorSDKListener != null) {
                             onPhotoEditorSDKListener.onEditTextChangeListener(
-                                    ((TextView) view).getText().toString(), ((TextView) view).getCurrentTextColor(), ((TextView) view).getTypeface());
+                                    ((TextView) view).getText().toString(), ((TextView) view).getCurrentTextColor(), ((TextView) view).getTypeface(), ((TextView) view).getLineHeight());
                         }
                     }
                 }
@@ -249,7 +249,7 @@ class MultiTouchListener implements OnTouchListener {
     }
 
     interface OnMultiTouchListener {
-        void onEditTextClickListener(String text, int colorCode, Typeface fontCode);
+        void onEditTextClickListener(String text, int colorCode, Typeface fontCode, int lineHeight);
         void onRemoveViewListener(View removedView);
     }
 }

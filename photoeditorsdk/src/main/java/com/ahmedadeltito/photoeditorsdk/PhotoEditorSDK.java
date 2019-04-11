@@ -63,7 +63,7 @@ public class PhotoEditorSDK implements MultiTouchListener.OnMultiTouchListener {
             onPhotoEditorSDKListener.onAddViewListener(ViewType.IMAGE, addedViews.size());
     }
 
-    public void addText(String text, int colorCodeTextView, Typeface fontCodeTextView) {
+    public void addText(String text, int colorCodeTextView, Typeface fontCodeTextView, int lineHeight) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         addTextRootView = inflater.inflate(R.layout.photo_editor_sdk_text_item_list, null);
         TextView addTextView = (TextView) addTextRootView.findViewById(R.id.photo_editor_sdk_text_tv);
@@ -73,6 +73,7 @@ public class PhotoEditorSDK implements MultiTouchListener.OnMultiTouchListener {
             addTextView.setTextColor(colorCodeTextView);
         if(fontCodeTextView != null)
             addTextView.setTypeface(fontCodeTextView);
+        addTextView.setLineHeight(lineHeight)
         MultiTouchListener multiTouchListener = new MultiTouchListener(deleteView,
                 parentView, this.imageView, onPhotoEditorSDKListener);
         multiTouchListener.setOnMultiTouchListener(this);
@@ -242,7 +243,7 @@ public class PhotoEditorSDK implements MultiTouchListener.OnMultiTouchListener {
     }
 
     @Override
-    public void onEditTextClickListener(String text, int colorCode, Typeface fontCode) {
+    public void onEditTextClickListener(String text, int colorCode, Typeface fontCode, int lineHeight) {
         if (addTextRootView != null) {
             parentView.removeView(addTextRootView);
             addedViews.remove(addTextRootView);

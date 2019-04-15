@@ -8,7 +8,7 @@ import android.graphics.Typeface;
 
 public interface OnPhotoEditorSDKListener {
 
-    void onEditTextChangeListener(String text, int colorCode, Typeface fontCode, int lineHeight);
+    void onEditTextChangeListener(String text, int colorCode, Typeface fontCode, float addLineSpace, float miltiplyLineSpace);
 
     void onAddViewListener(ViewType viewType, int numberOfAddedViews);
 
